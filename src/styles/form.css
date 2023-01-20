@@ -33,7 +33,7 @@
 .app__form {
     background-color: #fff;
     border-radius: .25rem;
-    min-width: 280px;
+    width: 280px;
     padding: 2rem ;
     z-index: 10;
 	-webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -177,3 +177,23 @@
     }
   }
   
+
+  @media screen and (max-width: 560px) {
+    .app__form-layout__container {
+        margin: auto;
+        overflow: hidden;
+        width: 90%;
+    }
+    .app__form {
+        width: 100%;
+    }
+    .app__form-header .app__form-header__border {
+        margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .app__form {
+        padding: 2rem 1.5rem;
+    }
+  }
