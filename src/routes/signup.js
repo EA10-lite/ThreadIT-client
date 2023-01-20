@@ -5,7 +5,6 @@ import {
     FormButton, 
     FormField, 
     FormHeader,
-    FormLayout,
     FormLink } from '../componets/forms';
 import { AiOutlineUser } from 'react-icons/ai';
 import { MdLockOpen, MdLockOutline, MdEmail } from 'react-icons/md';
@@ -19,55 +18,53 @@ function Signup() {
         set_visible(!visible);
     }
     return (
-        <FormLayout>
-            <Form
-                handleSubmit={(values)=> console.log(values)}
-                initialValues={{ email: '', name: '', username: '', password: ''}}
-                validationSchema={validation.registration_schema}
-            >
-                <FormHeader
-                    title="Register"
-                />
-                <FormField 
-                    Icon={AiOutlineUser}
-                    name="name"
-                    placeholder="name"
-                    type="text"
-                />
-                <FormField 
-                    Icon={AiOutlineUser}
-                    name="username"
-                    placeholder="username"
-                    type="text"
-                />
-                <FormField 
-                    Icon={MdEmail}
-                    name="email"
-                    placeholder="email"
-                    type="email"
-                />
-                <FormField 
-                    change_visibility={change_visibility}
-                    Icon={visible ? MdLockOpen : MdLockOutline}
-                    name="password"
-                    placeholder="password"
-                    type={visible ? "text" : "password"}
-                />
-                <p className='app__form-link'> Lost Password ? <a href="/"> click here </a> </p>
-                
-                <div className="app__form-buttons">
-                    <FormButton 
-                        loading={false}
-                        title="register"
-                        type="button"
-                        />
-                    <FormLink 
-                        title="login"
-                        url="/login"
+        <Form
+            handleSubmit={(values)=> console.log(values)}
+            initialValues={{ email: '', name: '', username: '', password: ''}}
+            validationSchema={validation.registration_schema}
+        >
+            <FormHeader
+                title="Register"
+            />
+            <FormField 
+                Icon={AiOutlineUser}
+                name="name"
+                placeholder="name"
+                type="text"
+            />
+            <FormField 
+                Icon={AiOutlineUser}
+                name="username"
+                placeholder="username"
+                type="text"
+            />
+            <FormField 
+                Icon={MdEmail}
+                name="email"
+                placeholder="email"
+                type="email"
+            />
+            <FormField 
+                change_visibility={change_visibility}
+                Icon={visible ? MdLockOpen : MdLockOutline}
+                name="password"
+                placeholder="password"
+                type={visible ? "text" : "password"}
+            />
+            <p className='app__form-link'> Lost Password ? <a href="/"> click here </a> </p>
+            
+            <div className="app__form-buttons">
+                <FormButton 
+                    loading={false}
+                    title="register"
+                    type="button"
                     />
-                </div>
-            </Form>
-        </FormLayout>
+                <FormLink 
+                    title="login"
+                    url="/login"
+                />
+            </div>
+        </Form>
     )
 }
 
