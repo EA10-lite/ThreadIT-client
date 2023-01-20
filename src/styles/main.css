@@ -1,0 +1,35 @@
+.app__main {
+    position: relative;
+    margin-top: 6rem;
+    width: 100%;
+}
+
+.app__main-container {
+    margin: auto;
+    width: 80%;
+}
+
+.app__main-container__row {
+    display: flex;
+    gap: 2rem;
+}
+
+.app__main-center {
+    flex: 1;
+    overflow: auto;
+}
+
+.app__main-left, .app__main-right {
+    flex: 0.5;
+    height: max-content;
+}
+
+.app__main-left {
+    background-color: coral;
+}
+.app__main-right {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    background-color: crimson;
+}

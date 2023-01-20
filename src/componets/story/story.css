@@ -1,0 +1,85 @@
+
+.app__stories-container__row {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+.app__stories-container__row::-webkit-scrollbar {
+    display: none;
+}
+
+.cta {
+    align-items: center;
+    background-color: var(--color-dark);
+    border-radius: .4rem;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cta p {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.app__stories-container__row-content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow: auto;
+}
+
+.app__stories-container__row-content::-webkit-scrollbar {
+    display: none;
+}
+
+.app__story-card, .cta{
+    border-radius: .4rem;
+    height: 200px;
+    overflow: hidden;
+    min-width: 130px;
+}
+.app__story-card {
+    position: relative;
+}
+
+.app__story-card__content img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.app__story-card__overlay {
+    background-color: rgba(0,0,0,0.3);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.app__story-card__content-info {
+    align-items: center;
+    bottom: 10px;
+    display: flex;
+    margin: auto 5%;
+    overflow: hidden;
+    position: absolute;
+    width: 90%;
+    z-index: 3;
+}
+.app__story-card__content-info img {
+    border-radius: 50%;
+    height: 1.8rem;
+    width: 1.8rem;
+}
+.app__story-card__content-info p {
+    color: var(--color-white);
+    font-size: .825rem;
+    font-weight: 400;
+    margin-left: .5rem;
+    white-space: nowrap;
+}

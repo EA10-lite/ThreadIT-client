@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Story } from '../componets';
 
 function Homepage() {
   return (
-    <h1> HOME PAGE </h1>
+    <>
+      <Story />
+    </>
   )
 }
 

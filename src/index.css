@@ -19,6 +19,7 @@
 }
 
 body {
+  background-color: var(--color-light);
   height: 100vh;
   margin: 0;
   font-family: 'Poppins', sans-serif;

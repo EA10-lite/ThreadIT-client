@@ -1,0 +1,58 @@
+.app__navbar {
+    background-color: var(--color-white);
+    position: fixed;
+    padding: 0.7rem 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.app__navbar-container {
+    margin: auto;
+    width: 80%;
+}
+
+.app__navbar-container__row {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.app__navbar-left, .app__navbar-right {
+    flex: .5;
+}
+
+.app__navbar-searchbox {
+    align-items: center;
+    background-color: var(--color-light);
+    flex: 1;
+    display: flex;
+    padding: var(--search-padding);
+}
+
+.app__navbar-searchbox input {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: .75rem;
+    font-weight: 400;
+}
+
+
+.app__navbar-searchbox input::placeholder {
+    color: var(--color-gray);
+}
+.app__navbar-searchbox svg {
+    color: var(--color-gray);
+    margin-right: 1rem;
+}
+
+.app__navbar-right {
+    display: flex;
+    justify-content: flex-end;
+}
+.app__navbar-right img {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
