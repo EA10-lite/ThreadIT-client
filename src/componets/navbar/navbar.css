@@ -36,6 +36,7 @@
     font-family: inherit;
     font-size: .75rem;
     font-weight: 400;
+    width: 100%;
 }
 
 
@@ -55,4 +56,16 @@
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
+}
+
+@media screen and (max-width: 824px) {
+    .app__navbar-container {
+        width: 90%;
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .app__navbar-container {
+        width: 96%;
+    }
 }

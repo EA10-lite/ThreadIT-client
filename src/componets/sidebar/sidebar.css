@@ -1,0 +1,67 @@
+
+.app__profile {
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: .4rem;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem ;
+}
+.app__profile img {
+    border-radius: 50%;
+    height: 2.5rem;
+    margin-right: 1rem;
+    width: 2.5rem;
+}
+
+.app__profile div span {
+    font-size: .825rem;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+}
+.app__profile a {
+    color: var(--color-dark);
+    font-size: .75rem;
+    font-weight: 400;
+}
+
+.app__profile-menu {
+    background-color: var(--color-white);
+}
+
+.app__profile-menu .app__profile-menu__links  {
+    color: var(--color-dark);
+    padding: .625rem 1rem;
+    transition: all 300ms ease-in;
+}
+
+.app__profile-menu li a .app__profile-menu__links:hover, .btn:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.app__profile-menu .active .app__profile-menu__links {
+    background-color: var(--color-dark) !important;
+    color: var(--color-white) !important;
+}
+
+.app__profile-menu__links {
+    align-items: center;
+    display: flex;
+}
+
+.app__profile-menu__links svg {
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+.app__profile-menu__links span {
+    font-size: .75rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.app__profile-menu__links.btn {
+    cursor: pointer;
+}

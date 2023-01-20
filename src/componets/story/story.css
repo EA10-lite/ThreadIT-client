@@ -1,7 +1,7 @@
 
 .app__stories-container__row {
     display: flex;
-    gap: 1rem;
+    gap: .625rem;
     overflow: hidden;
 }
 .app__stories-container__row::-webkit-scrollbar {
@@ -25,7 +25,7 @@
 .app__stories-container__row-content {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: .625rem;
     overflow: auto;
 }
 
@@ -35,9 +35,9 @@
 
 .app__story-card, .cta{
     border-radius: .4rem;
-    height: 200px;
+    height: 170px;
     overflow: hidden;
-    min-width: 130px;
+    min-width: 100px;
 }
 .app__story-card {
     position: relative;
@@ -82,4 +82,11 @@
     font-weight: 400;
     margin-left: .5rem;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 560px) {
+    .app__story-card, .cta{
+        height: 150px;
+        width: 80px;
+    }
 }

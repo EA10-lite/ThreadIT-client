@@ -1,6 +1,7 @@
 .app__main {
-    position: relative;
+    height: 100%;
     margin-top: 6rem;
+    position: relative;
     width: 100%;
 }
 
@@ -26,10 +27,38 @@
 
 .app__main-left {
     padding: 0 .2rem;
+    position: sticky;
+    top: 0;
 }
 .app__main-right {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
     background-color: crimson;
+}
+
+@media screen and (max-width: 824px) {
+    .app__main-container {
+        width: 90%;
+    }
+    
+    .app__main-container__row {
+        gap: 1rem;
+    }
+
+    .app__main-right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app__main {
+        margin-top: 5rem;
+    }
+    .app__main-container {
+        width: 96%;
+    }
+    .app__main-left {
+        display: none;
+    }
 }
