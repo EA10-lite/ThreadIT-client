@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FormHeader, FormLink } from '../componets/forms';
 import '../styles/form.css';
 
 function AccountVerify() {
