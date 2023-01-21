@@ -11,10 +11,10 @@ function ProfileLayout() {
         <div className="app__profile-container">
             <div className="app__profile-container__header">
                 <div className="app__profile-coverphoto">
-                    <img src={cover_photo}  />
+                    <img src={cover_photo} alt=""  />
                 </div>
                 <div className="app__profile-info">
-                    <img src={avatar} />
+                    <img src={avatar} alt="" />
                     <div className="app__profile-info__names">
                         <h4> Chris Emmanuel </h4>
                         <p> chris.jr </p>
