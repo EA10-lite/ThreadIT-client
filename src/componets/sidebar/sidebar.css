@@ -1,3 +1,6 @@
+.app__sidebar {
+    position: relative;
+}
 
 .app__sidebar-profile {
     align-items: center;
@@ -64,4 +67,29 @@
 
 .app__profile-menu__links.btn {
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .app__sidebar-profile {
+        display: none;
+    }
+
+    .app__sidebar-profile__menu {
+        border-radius: .4rem;
+        overflow: hidden;
+    }
+
+    .app__sidebar-profile__menu .app__profile-menu__links {
+        padding:1rem;
+    }
+
+    .app__profile-menu__links svg {
+        flex-grow: 1;
+        max-width: 1.5rem;
+    }
+
+    .app__profile-menu__links span {
+        display: none;
+    }
 }

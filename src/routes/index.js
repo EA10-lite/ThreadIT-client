@@ -1,3 +1,4 @@
+export { default as AccountVerify } from './account-verify';
 export { default as Homepage } from './homepage';
 export { default as Login } from './login';
 export { default as Profile } from './profile';
