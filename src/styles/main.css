@@ -55,9 +55,6 @@
     .app__main {
         margin-top: 5rem;
     }
-    .app__main-container {
-        width: 96%;
-    }
     .app__main-left {
         display: none;
     }

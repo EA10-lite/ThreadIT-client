@@ -43,12 +43,12 @@ const MenuButton = ({ handle_click, Icon, title }) => {
 function Sidebar() {
     return (
         <aside className="app__sidebar">
-            <div className="app__profile">
+            <div className="app__sidebar-profile">
                 <img src={avatar} alt="" />
                 <Link to="/profile"> EA10-Lite </Link>
             </div>
             
-            <ul className="app__profile-menu">
+            <ul className="app__sidebar-profile__menu">
                 <MenuLink Icon={MdOutlineHome} url="/" title="Home" />
                 <MenuLink Icon={MdOutlineExplore} url="/explore" title="Explore" />
                 <MenuButton Icon={SiGooglemessages} title="Messages" />

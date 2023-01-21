@@ -63,9 +63,3 @@
         width: 90%;
     }    
 }
-
-@media screen and (max-width: 768px) {
-    .app__navbar-container {
-        width: 96%;
-    }
-}

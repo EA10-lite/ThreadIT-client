@@ -1,0 +1,42 @@
+
+.app__profile-coverphoto {
+    margin-bottom: 0;
+}
+
+.app__profile-coverphoto img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 10rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.app__profile-info {
+    align-items: flex-end;
+    background-color: var(--color-white);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.app__profile-info img {
+    border-radius: 50%;
+    height: 6rem;
+    margin-top: -3rem;
+    width: 6rem;
+}
+
+.app__profile-info__names h4 {
+    color: var(--color-dark);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.app__profile-info__names p {
+    font-size: .875rem;
+    font-weight: 400;
+    text-align: center;
+}

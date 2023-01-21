@@ -2,12 +2,10 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 // containers
-import { AuthLayout, MainLayout } from './containers';
+import { AuthLayout, MainLayout, ProfileLayout } from './containers';
 
 // routes
-import Homepage from './routes/homepage';
-import Login from './routes/login';
-import Signup from './routes/signup';
+import { Homepage, Login, Profile, Signup } from './routes';
 
 function App() {
   return (
@@ -21,6 +19,9 @@ function App() {
       {/* ************Logged in routes********** */}
       <Route path="" element={<MainLayout />}>
         <Route index path="/" element={<Homepage />} />
+        <Route path="" element={<ProfileLayout />} >
+          <Route path="profile/:id" element={<Profile />} />
+        </Route>
       </Route>
     </Routes>
   );
