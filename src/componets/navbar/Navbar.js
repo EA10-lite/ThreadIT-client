@@ -22,9 +22,11 @@ function Navbar() {
                     />
                 </div>
                 <div className="app__navbar-right">
-                    <div className="app__navbar-dropdown">
-                        <img src={avatar} alt="" />
-                    </div>
+                    <Link to="/profile/ea10">
+                        <div className="app__navbar-dropdown">
+                            <img src={avatar} alt="" />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
