@@ -1,0 +1,54 @@
+.app__users-container {
+    width: 100%;
+}
+.app__users-container h3 {
+    color: var(--color-dark);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .5rem 0;
+    text-align: center;
+}
+
+.app__user {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem 1rem;
+    transition: all 300ms ease-in;
+}
+.app__user:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+.app__user:hover .app__user-btn__add {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.app__user .app__user-info {
+    align-items: center;
+    display: flex;
+}
+
+.app__user img {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
+.app__user a {
+    font-size: .75rem;
+    font-weight: 400;
+    margin-left: .625rem;
+}
+
+.app__user-btn__add {
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 1rem;
+    color: var(--color-white);
+    font-family: inherit;
+    font-size: .75rem;
+    font-weight: 400;
+    padding: .4rem 1rem;
+}

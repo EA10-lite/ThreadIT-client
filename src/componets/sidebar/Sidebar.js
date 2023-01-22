@@ -11,6 +11,7 @@ import {
     MdLogout,
 } from 'react-icons/md';
 import { SiGooglemessages } from 'react-icons/si';
+import { FaUsers } from 'react-icons/fa';
 
 const MenuLink = ({ Icon, title, url }) => {
     const location = useLocation();
@@ -45,11 +46,15 @@ function Sidebar() {
         <aside className="app__sidebar">
             <div className="app__sidebar-profile">
                 <img src={avatar} alt="" />
-                <Link to="/profile"> EA10-Lite </Link>
+                <div>
+                    <p> Emmanuel Chris </p>
+                    <Link to="/profile"> EA10-Lite </Link>
+                </div>
             </div>
             
             <ul className="app__sidebar-profile__menu">
                 <MenuLink Icon={MdOutlineHome} url="/" title="Home" />
+                <MenuLink Icon={FaUsers} url="/friends" title="Find New People" />
                 <MenuLink Icon={MdOutlineExplore} url="/explore" title="Explore" />
                 <MenuButton Icon={SiGooglemessages} title="Messages" />
                 <MenuButton Icon={MdNotificationsNone} title="Notifications" />

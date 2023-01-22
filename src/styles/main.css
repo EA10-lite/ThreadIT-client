@@ -1,11 +1,16 @@
-.app__main {
+.app {
     height: 100%;
-    margin-top: 6rem;
+    width: 100%;
+}
+.app__main {
+    height: calc(100% - 6rem);
     position: relative;
+    top: 6rem;
     width: 100%;
 }
 
 .app__main-container {
+    height: 100%;
     margin: auto;
     width: 80%;
 }
@@ -13,6 +18,10 @@
 .app__main-container__row {
     display: flex;
     gap: 2rem;
+    height: 100%;
+}
+.app__main-center, .app__main-left, .app__main-right {
+    height: 100%;
 }
 
 .app__main-center {
@@ -20,21 +29,35 @@
     overflow: auto;
 }
 
-.app__main-left, .app__main-right {
+.app__main-left {
     flex: 0.5;
-    height: max-content;
+    padding: 0 .2rem;
 }
 
-.app__main-left {
-    padding: 0 .2rem;
-    position: sticky;
-    top: 0;
-}
 .app__main-right {
     align-items: flex-end;
     display: flex;
+    flex: 0.5;
     flex-direction: column;
-    background-color: crimson;
+    gap: 1rem;
+    overflow: auto;
+}
+
+.app__main-right::-webkit-scrollbar {
+    display: block;
+}
+
+.app__users {
+    background-color: var(--color-white);
+    border-radius: .4rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.app__chats {
+    flex-grow: 1;
+    background-color: #1a2b3c ;
+    width: 100%;
 }
 
 @media screen and (max-width: 824px) {
@@ -52,15 +75,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    .app__main {
-        margin-top: 5rem;
-    }
     .app__main-left {
         right: 10px;
         max-width: 4rem;
         overflow: hidden;
-        position: absolute;
+        position: fixed;
         top: 50%;
+        transform: translateY(-25%);
         z-index: 10;
         -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/main.css';
 import { Outlet } from 'react-router-dom';
-import { Navbar, Sidebar } from '../componets';
+import { Navbar, Sidebar, Users } from '../componets';
 
 function MainLayout() {
   return (
-    <>
+    <div className="app">
         <Navbar />
         <main className="app__main">
           <div className="app__main-container">
@@ -17,12 +17,20 @@ function MainLayout() {
                 <Outlet />
               </div>
               <div className="app__main-right">
-                <h3> RIGHT SIDEBAR </h3>
+                {/* FRIENDS */}
+                <div className="app__users">
+                  <Users />
+                </div>
+
+                {/* Meesages */}
+                <div className="app__chats">
+                  <h3> CHATS </h3>
+                </div>
               </div>
             </div>
           </div>
         </main>
-    </>
+    </div>
   )
 }
 

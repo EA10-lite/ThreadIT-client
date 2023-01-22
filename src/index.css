@@ -20,17 +20,19 @@
 
 body {
   background-color: var(--color-light);
-  height: 100%;
   margin: 0;
+  overflow: hidden;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
+html, body {
+  height: 100%;
+}
 #root {
   height: 100%;
-  width: 100%;
 }
 
 code {
