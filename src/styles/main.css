@@ -76,17 +76,12 @@
 
 @media screen and (max-width: 768px) {
     .app__main-left {
+        bottom: 20px;
         max-width: 4rem;
         overflow: hidden;
+        padding: 0;
         position: absolute;
         right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
         z-index: 10;
     }
-    /* .app__main-left {
-        max-width: 4rem;
-        max-width: max-content;
-        padding: 0;
-    } */
 }

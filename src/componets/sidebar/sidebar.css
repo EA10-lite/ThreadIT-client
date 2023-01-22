@@ -1,6 +1,6 @@
 .app__sidebar {
     height: 100%;
-    /* position: relative; */
+    position: relative;
 }
 
 .app__sidebar-profile {
@@ -80,7 +80,7 @@
     display: none;
     height: 3rem;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
     transition: all 300ms ease-in;
     width: 3rem;
 }
@@ -94,17 +94,14 @@
 }
 
 @media screen and (max-width: 768px) {
-    /* .app__sidebar {
-        bottom: -10px;
-        max-width: 4rem;
-        position: absolute;
-        right: 10px;
-        z-index: 10;
-    } */
+    .app__sidebar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
     .app__sidebar-profile {
         display: none;
     }
-
     .app__sidebar-menu {
         border-radius: .4rem;
         width: 0;
