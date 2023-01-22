@@ -12,6 +12,7 @@
 .app__main-container {
     height: 100%;
     margin: auto;
+    position: relative;
     width: 80%;
 }
 
@@ -31,6 +32,7 @@
 
 .app__main-left {
     flex: 0.5;
+    overflow: auto;
     padding: 0 .2rem;
 }
 
@@ -81,7 +83,7 @@
         overflow: hidden;
         padding: 0;
         position: absolute;
-        right: 10px;
+        right: 0;
         z-index: 10;
     }
 }

@@ -96,8 +96,8 @@
 @media screen and (max-width: 768px) {
     .app__sidebar {
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: center;
+        align-items: center;
     }
     .app__sidebar-profile {
         display: none;
