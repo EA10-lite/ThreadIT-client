@@ -147,7 +147,6 @@
 }
 
 .app__account-verify h2 {
-    color: var(--color-dark);
     font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: 1rem;

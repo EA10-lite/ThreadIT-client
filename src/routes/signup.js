@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/form.css';
 import { 
     Form, 
     FormButton, 
     FormField, 
     FormHeader,
-    FormLink } from '../componets/forms';
+    FormLink } from '../componets/auth-forms';
 import { AiOutlineUser } from 'react-icons/ai';
 import { MdLockOpen, MdLockOutline, MdEmail } from 'react-icons/md';
 
@@ -51,7 +52,7 @@ function Signup() {
                 placeholder="password"
                 type={visible ? "text" : "password"}
             />
-            <p className='app__form-link'> Lost Password ? <a href="/"> click here </a> </p>
+            <p className='app__form-link'> Lost Password ? <Link to="/reset-password"> click here </Link> </p>
             
             <div className="app__form-buttons">
                 <FormButton 

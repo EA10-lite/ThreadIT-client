@@ -22,9 +22,20 @@ const registration_schema = Yup.object().shape({
     username,
 });
 
+const reset_password = Yup.object().shape({
+    email,
+});
+
+const set_password = Yup.object().shape({
+    password,
+    new_password: Yup.string().required().oneOf([Yup.ref('password')], 'Password must match')
+});
+
 const validate = {
     login_schema,
-    registration_schema
+    registration_schema,
+    reset_password,
+    set_password
 }
 
-export default validate
+export default validate;

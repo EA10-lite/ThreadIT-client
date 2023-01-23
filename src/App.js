@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AuthLayout, MainLayout, ProfileLayout } from './containers';
 
 // routes
-import { AccountVerify, Homepage, Login, Profile, Signup } from './routes';
+import { AccountVerify, Homepage, Login, Profile, ResetPassword, SetPassword, Signup } from './routes';
 
 function App() {
   return (
@@ -14,6 +14,8 @@ function App() {
       <Route path="" element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/set-password:/token" element={<SetPassword />} />
         <Route path="/account-verify/:token" element={<AccountVerify />} />
       </Route>
 
