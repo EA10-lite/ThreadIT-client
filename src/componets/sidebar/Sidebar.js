@@ -51,7 +51,7 @@ function Sidebar() {
         const menu = document.querySelector(".app__sidebar-menu");
         const btn = document.querySelector(".app__sidebar-menu__btns");
         const handle_click = (e) => {
-            if(window.innerWidth <=768){
+            if(window.innerWidth <= 560){
                 if(btn.contains(e.target)){
                     menu.style.width = '100%';
                     btn.style.display = "none";
@@ -70,7 +70,7 @@ function Sidebar() {
         const menu = document.querySelector(".app__sidebar-menu");
         const btn = document.querySelector(".app__sidebar-menu__btns");
         const handle_resize = () => {
-            if(window.innerWidth > 768){
+            if(window.innerWidth > 560){
                 btn.style.display = "none";
                 menu.style.width = "100%";
             } else {

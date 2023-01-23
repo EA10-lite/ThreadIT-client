@@ -10,6 +10,11 @@ import avatar3 from '../assets/profile-3.jpg';
 import avatar4 from '../assets/profile-4.jpg';
 import avatar5 from '../assets/profile-5.jpg';
 
+import avatar6 from '../assets/profile-6.jpg';
+import avatar7 from '../assets/profile-7.jpg';
+import avatar8 from '../assets/profile-8.jpg';
+import avatar9 from '../assets/profile-9.jpg';
+
 const feeds = [
     {
         id: 1,
@@ -20,8 +25,11 @@ const feeds = [
         feed: {
             urls: image1,
             comments: [],
-            likes: 10,
-            location: ''
+            likes: [
+                { id: 1, avatar: avatar6, username: 'Mikealangelo' },
+                { id: 2, avatar: avatar7, username: 'Zinchenko' },
+            ],
+            location: 'San Francisco'
         }
     },
     {
@@ -33,8 +41,11 @@ const feeds = [
         feed: {
             urls: image2,
             comments: [],
-            likes: 10,
-            location: ''
+            likes: [
+                { id: 1, avatar: avatar8, username: 'Felix' },
+                { id: 2, avatar: avatar9, username: 'Guameres' },
+            ],
+            location: 'Los Angeles'
         }
     },
     {
@@ -46,8 +57,12 @@ const feeds = [
         feed: {
             urls: image3,
             comments: [],
-            likes: 10,
-            location: ''
+            likes: [
+                { id: 2, avatar: avatar9, username: 'Guameres' },
+                { id: 3, avatar: avatar2, username: 'Karim' },
+                { id: 4, avatar: avatar3, username: 'Alcantara' },
+            ],
+            location: 'Panama'
         }
     },
     {
@@ -59,8 +74,8 @@ const feeds = [
         feed: {
             urls: image4,
             comments: [],
-            likes: 10,
-            location: ''
+            likes: [],
+            location: 'Montpellier Paris'
         }
     },
     {
@@ -72,8 +87,8 @@ const feeds = [
         feed: {
             urls: image5,
             comments: [],
-            likes: 10,
-            location: ''
+            likes: [],
+            location: 'Razario'
         }
     },
 

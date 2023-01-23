@@ -74,9 +74,9 @@
 
 .app__sidebar-menu__btns {
     align-items: center;
-    background-color: var(--color-white);
+    background-color: var(--color-dark);
     border-radius: 50%;
-    color: var(--color-dark);
+    color: var(--color-white);
     display: none;
     height: 3rem;
     justify-content: center;
@@ -93,23 +93,27 @@
     color: var(--color-white);
 }
 
-@media screen and (max-width: 768px) {
-    .app__sidebar {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
+@media screen and (max-width: 768px ){
     .app__sidebar-profile {
         display: none;
     }
+    
     .app__sidebar-menu {
         border-radius: .4rem;
         width: 0;
         overflow: hidden;
     }
 
-    .app__sidebar-menu .app__sidebar-menu__links {
-        padding:1rem;
+    .app__sidebar-menu__btns {
+        display: none;
+    }
+
+    .app__sidebar-menu__links {
+        align-items: center;
+        justify-content: center;
+    }
+    .app__sidebar-menu__links span {
+        display: none;
     }
 
     .app__sidebar-menu__links svg {
@@ -117,8 +121,21 @@
         max-width: 1.5rem;
     }
 
-    .app__sidebar-menu__links span {
-        display: none;
+    .app__sidebar-menu .app__sidebar-menu__links {
+        padding:1rem;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    .app__sidebar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .app__sidebar-menu .app__sidebar-menu__links {
+        padding:1rem;
     }
 
     .app__sidebar-menu__btns {

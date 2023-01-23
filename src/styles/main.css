@@ -62,7 +62,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 956px) {
     .app__main-container {
         width: 90%;
     }
@@ -78,9 +78,14 @@
 
 @media screen and (max-width: 768px) {
     .app__main-left {
+        max-width: 4rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .app__main-left {
         bottom: 40px;
         height: max-content;
-        max-width: 4rem;
         overflow: hidden;
         padding: 0;
         position: absolute;
