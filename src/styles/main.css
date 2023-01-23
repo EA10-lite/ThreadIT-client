@@ -78,12 +78,16 @@
 
 @media screen and (max-width: 768px) {
     .app__main-left {
-        bottom: 20px;
+        bottom: 40px;
+        height: max-content;
         max-width: 4rem;
         overflow: hidden;
         padding: 0;
         position: absolute;
         right: 0;
         z-index: 10;
+    }
+    .app__main-center::-webkit-scrollbar {
+        display: none;
     }
 }

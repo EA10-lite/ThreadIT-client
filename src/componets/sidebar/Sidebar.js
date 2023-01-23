@@ -48,16 +48,17 @@ function Sidebar() {
     }
 
     useEffect(() => {
-        const target = document.querySelector(".app__sidebar");
         const menu = document.querySelector(".app__sidebar-menu");
         const btn = document.querySelector(".app__sidebar-menu__btns");
         const handle_click = (e) => {
-            if(target.contains(e.target)){
-                menu.style.width = '100%';
-                btn.style.display = "none";
-            } else {
-                menu.style.width = 0;
-                btn.style.display = "flex";
+            if(window.innerWidth <=768){
+                if(btn.contains(e.target)){
+                    menu.style.width = '100%';
+                    btn.style.display = "none";
+                } else {
+                    menu.style.width = 0;
+                    btn.style.display = "flex";
+                }
             }
         }
 
