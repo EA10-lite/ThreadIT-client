@@ -5,8 +5,10 @@ import './navbar.css';
 
 import avatar from '../../assets/profile-11.jpg';
 import { BiSearch } from 'react-icons/bi';
+import { MdNotificationsNone } from 'react-icons/md';
+import Notifications from '../notifications/Notifications';
 
-function Navbar() {
+function Navbar({ open_notifications, close_notifications }) {
   return (
     <nav className="app__navbar">
         <div className="app__navbar-container">
@@ -22,6 +24,12 @@ function Navbar() {
                     />
                 </div>
                 <div className="app__navbar-right">
+                    <div className="app__navbar-item">
+                        <MdNotificationsNone onClick={open_notifications} />
+                        <Notifications 
+                            close_notifications={close_notifications}
+                        />
+                    </div>
                     <Link to="/profile/ea10">
                         <div className="app__navbar-dropdown">
                             <img src={avatar} alt="" />

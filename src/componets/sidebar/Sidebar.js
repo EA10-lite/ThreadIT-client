@@ -8,7 +8,6 @@ import { IoMdSettings } from 'react-icons/io';
 import { 
     MdOutlineHome, 
     MdOutlineExplore,
-    MdNotificationsNone,
     MdLogout,
 } from 'react-icons/md';
 import { SiGooglemessages } from 'react-icons/si';
@@ -33,7 +32,7 @@ const MenuLink = ({ Icon, title, url }) => {
 
 const MenuButton = ({ handle_click, Icon, title }) => {
     return (
-        <li>
+        <li onClick={handle_click}>
             <div className="app__sidebar-menu__links btn">
                 <Icon />
                 <span> { title } </span>
@@ -42,7 +41,8 @@ const MenuButton = ({ handle_click, Icon, title }) => {
     )
 }
 
-function Sidebar() {
+function Sidebar({ open_notifications_bar }) {
+
     const open_menu = () => {
         document.querySelector(".app__sidebar-menu").style.width = "100%";
     }
@@ -98,7 +98,6 @@ function Sidebar() {
                 <MenuLink Icon={FaUsers} url="/friends" title="Find New People" />
                 <MenuLink Icon={MdOutlineExplore} url="/explore" title="Explore" />
                 <MenuButton Icon={SiGooglemessages} title="Messages" />
-                <MenuButton Icon={MdNotificationsNone} title="Notifications" />
                 <MenuLink Icon={IoMdSettings} url="/settings" title="Settings" />
                 <MenuLink Icon={MdLogout} url="/login" title="Logout" />
             </ul>

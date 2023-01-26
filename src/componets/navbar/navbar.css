@@ -53,13 +53,23 @@
 }
 
 .app__navbar-right {
+    align-items: center;
     display: flex;
     justify-content: flex-end;
+    gap: 1rem;
+}
+
+.app__navbar-right .app__navbar-item {
+    position: relative;
 }
 .app__navbar-right img {
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
+}
+
+.app__navbar-right svg {
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 824px) {

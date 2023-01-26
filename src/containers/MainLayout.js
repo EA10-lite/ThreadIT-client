@@ -1,12 +1,25 @@
 import React from 'react';
 import '../styles/main.css';
 import { Outlet } from 'react-router-dom';
-import { Navbar, Sidebar, Users } from '../componets';
+import {  ChatContainer, Navbar,  Sidebar } from '../componets';
 
 function MainLayout() {
+  const open_notifications = () => {
+    const notifications_bar = document.querySelector(".app__notifications");
+    notifications_bar.classList.add("active");
+
+  };
+  const close_notifications = () => {
+    const notifications_bar = document.querySelector(".app__notifications");
+    notifications_bar.classList.remove("active");
+
+  };
   return (
     <div className="app">
-        <Navbar />
+        <Navbar 
+          open_notifications={open_notifications} 
+          close_notifications={close_notifications} 
+        />
         <main className="app__main">
           <div className="app__main-container">
             <div className="app__main-container__row">
@@ -17,15 +30,16 @@ function MainLayout() {
                 <Outlet />
               </div>
               <div className="app__main-right">
-                {/* FRIENDS */}
-                <div className="app__users">
-                  <Users />
-                </div>
 
                 {/* Meesages */}
                 <div className="app__chats">
-                  <h3> CHATS </h3>
+                  <ChatContainer />
                 </div>
+
+                {/* FRIENDS */}
+                {/* <div className="app__users">
+                  <Users />
+                </div> */}
               </div>
             </div>
           </div>
