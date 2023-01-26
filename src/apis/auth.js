@@ -20,7 +20,10 @@ const register = (body) => {
     return client.post(register_url, {...body});
 }
 
-export default {
+const auth_api =  {
     login,
     register
 }
+
+export default auth_api
+
