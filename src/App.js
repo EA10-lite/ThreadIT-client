@@ -24,6 +24,7 @@ function App() {
         <Route index path="/" element={<Homepage />} />
         <Route path="" element={<ProfileLayout />} >
           <Route path="profile/:id" element={<Profile />} />
+          <Route path="profile/:id/posts" element={<h1> HELLO WORLD </h1>} />
         </Route>
       </Route>
     </Routes>

@@ -1,6 +1,6 @@
-
 .app__profile-coverphoto {
     margin-bottom: 0;
+    position: relative;
 }
 
 .app__profile-coverphoto img {
@@ -10,16 +10,16 @@
     object-fit: cover;
     width: 100%;
 }
-
 .app__profile-info {
-    align-items: flex-end;
     background-color: var(--color-white);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+}
+
+.app__profile-info__header {
+    align-items: flex-end;
     display: flex;
-    justify-content: space-between;
     margin-top: -.5rem;
     padding: 1rem 1.5rem;
+    position: relative;
 }
 
 .app__profile-info img {
@@ -27,16 +27,127 @@
     height: 6rem;
     margin-top: -3rem;
     width: 6rem;
+    z-index: 2;
 }
 
-.app__profile-info__names h4 {
+.app__profile-info__details {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+
+.app__profile-info div h4 {
     color: var(--color-dark);
     font-size: 1rem;
     font-weight: 400;
 }
 
-.app__profile-info__names p {
+.app__profile-info div p {
     font-size: .875rem;
     font-weight: 400;
+    margin: .4rem 0;
+}
+
+.app__profile-info__details .button {
+    align-items: center;
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: .4rem;
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    font-size: .75rem;
+    font-weight: 500;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: .4rem 1rem;
+}
+
+.button svg {
+    font-size: 1rem;
+}
+
+.file_input input {
+    width: 0;
+    height: 0;
+}
+
+.file_input {
+    align-items: center;
+    background-color: var(--color-dark);
+    border-radius: 50%;
+    display: flex;
+    height: 2.2rem;
+    justify-content: center;
+    width: 2.2rem;
+}
+
+.app__profile-coverphoto .file_input {
+    bottom: 0px;
+    position: absolute;
+    right: 10px;
+    z-index: 2;
+}
+
+.app__profile-coverphoto .file_input svg {
+    color: var(--color-white);
+    font-size: 1.4rem;
+}
+
+.app__profile-info__img-container {
+    position: relative;
+}
+.app__profile-info__img-container .file_input {
+    height: 1.5rem;
+    position: absolute;
+    right: -4px;
+    top: calc(70% - 1.5rem);
+    width: 1.5rem;
+    z-index: 3;
+}
+
+.app__profile-info__img-container .file_input svg {
+    color: var(--color-white);
+    font-size: .875rem;
+}
+
+.app__profile-info .bio {
+    padding: 1rem 0;
     text-align: center;
+}
+
+
+/* feed */
+.app__profile-create {
+    margin-top: 1rem;
+}
+
+
+/* profile navigations */
+.app__profile-navigations {
+    background-color: var(--color-white);
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    margin-top: .2rem;
+    padding: 1rem;
+}
+
+.app__profile-navigations a {
+    background-color: var(--color-light);
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    transition: 300ms all ease-in;
+}
+
+.app__profile-navigations a:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.app__profile-navigations a.active {
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }

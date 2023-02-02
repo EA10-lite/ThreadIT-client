@@ -1,8 +1,11 @@
 export { default as ChatContainer } from './chats/ChatContainer';
+export { default as CreateFeed } from './feeds/CreateFeed';
+export { default as Feed } from './feeds/Feed';
 export { default as Feeds } from './feeds/Feeds';
 export { default as Navbar } from './navbar/Navbar';
 export { default as Notifications } from './notifications/Notifications';
 export { default as Sidebar } from './sidebar/Sidebar';
 export { default as Story } from './story/Story';
 export { default as User } from './users/User';
+export { default as Upload } from './upload/Upload';
 export { default as Users } from './users/Users';

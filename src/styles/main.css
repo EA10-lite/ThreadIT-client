@@ -20,6 +20,7 @@
     display: flex;
     gap: 1rem;
     height: 100%;
+    position: relative;
 }
 .app__main-center, .app__main-left, .app__main-right {
     height: 100%;
@@ -28,14 +29,19 @@
 .app__main-center {
     flex: 1;
     overflow: auto;
+    position: relative;
 }
 
 .app__main-left {
     flex: 0.45;
-    overflow-x: hidden;
-    overflow: auto;
-    overflow: hidden;
+    /* overflow-x: hidden; */
+    /* overflow: auto; */
     padding: 0 .2rem;
+    position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
 }
 
 .app__main-right {
@@ -54,14 +60,13 @@
 .app__users {
     background-color: var(--color-white);
     border-radius: .4rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
 }
 
 .app__chats {
     border-radius: .4rem;
     flex-grow: 1;
-    padding: 1rem 0;
     width: 100%;
 }
 
@@ -89,7 +94,7 @@
     .app__main-left {
         bottom: 40px;
         height: max-content;
-        overflow: hidden;
+        /* overflow: hidden; */
         padding: 0;
         position: absolute;
         right: 0;

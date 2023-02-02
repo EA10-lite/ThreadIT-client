@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './sidebar.css';
 
-import avatar from '../../assets/profile-11.jpg';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { IoMdSettings } from 'react-icons/io';
 import { 
@@ -12,6 +11,9 @@ import {
 } from 'react-icons/md';
 import { SiGooglemessages } from 'react-icons/si';
 import { FaUsers } from 'react-icons/fa';
+
+// mock data
+import user from '../../data/user';
 
 const MenuLink = ({ Icon, title, url }) => {
     const location = useLocation();
@@ -41,7 +43,8 @@ const MenuButton = ({ handle_click, Icon, title }) => {
     )
 }
 
-function Sidebar({ open_notifications_bar }) {
+function Sidebar() {
+    const location = useLocation(); 
 
     const open_menu = () => {
         document.querySelector(".app__sidebar-menu").style.width = "100%";
@@ -85,11 +88,11 @@ function Sidebar({ open_notifications_bar }) {
 
     return (
         <aside className="app__sidebar">
-            <div className="app__sidebar-profile">
-                <img src={avatar} alt="" />
+            <div className={`app__sidebar-profile  ${location.pathname === `/profile/${user.id}` && "active"}`}>
+                <img src={user?.avatar} alt="" />
                 <div>
-                    <p> Emmanuel Chris </p>
-                    <Link to="/profile"> EA10-Lite </Link>
+                    <p> { user?.name} </p>
+                    <Link to={`/profile/${user.id}`}> { user?.username} </Link>
                 </div>
             </div>
             

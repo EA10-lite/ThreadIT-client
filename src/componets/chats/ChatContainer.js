@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './chat.css';
 
 import { BiSearch } from 'react-icons/bi';
+import active_chats from '../../data/chats';
 
 function ChatContainer() {
-  const [ active_filter, set_active_filter ] = useState("all");
 
   return (
     <div className="app__chat-container">
@@ -19,19 +19,18 @@ function ChatContainer() {
                 type="text" 
             />
         </div>
-        <div className="app__chat-header__filter">
-          <div 
-            className={active_filter === "all" && "app__chat-filter__active"}
-            onClick={()=> set_active_filter("all")}
-          > All </div>
-          <div 
-            className={active_filter === "unread" && "app__chat-filter__active"}
-            onClick={()=> set_active_filter("unread")}
-          > Unread <span> 1 </span>  </div>
-          <div 
-            className={active_filter === "request" && "app__chat-filter__active"}
-            onClick={()=> set_active_filter("request")}
-          > Requests <span> 3 </span>  </div>
+        <div className="app__chat-active__users">
+          { active_chats.map(chats => (
+            <div className="app__chat-active__user" key={chats?.chat_id}>
+              <div className="app__chat-active__user-img">
+                <img src={chats?.user?.avatar} alt="" />
+                <div className="box">
+                  <div className='active-box' />
+                </div>
+              </div>
+                <p> { chats?.user?.username.slice(0, 10) } </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

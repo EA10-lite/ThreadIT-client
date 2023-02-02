@@ -6,10 +6,12 @@ import Feed from './Feed';
 // mock data
 import feeds from '../../data/feed';
 
-function Feeds() {
+function Feeds({ open_upload_menu}) {
   return (
     <div className="app__feeds">
-        <CreateFeed />
+        <CreateFeed 
+          open_upload_menu={open_upload_menu}
+        />
 
         { feeds.map(feed=> (
             <Feed 

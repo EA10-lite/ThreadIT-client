@@ -81,6 +81,15 @@
 .app__form-header {
     margin-bottom: 1.25rem;
 }
+.app__form-header__logo{
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.app__form-header__logo img {
+    object-fit: contain;
+    width: 6rem;
+}
 
 .app__form-header h2 {
     color: var(--color-primary);

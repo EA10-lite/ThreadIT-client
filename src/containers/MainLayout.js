@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/main.css';
 import { Outlet } from 'react-router-dom';
-import {  ChatContainer, Navbar,  Sidebar } from '../componets';
+import {  ChatContainer, Navbar,  Sidebar, Upload } from '../componets';
 
 function MainLayout() {
+  const [ toggle_upload, set_toggle_upload ] = useState(false);
+  const open_upload_menu = () => set_toggle_upload(true);
+  const close_upload_menu = () => set_toggle_upload(false);
+
   const open_notifications = () => {
     const notifications_bar = document.querySelector(".app__notifications");
     notifications_bar.classList.add("active");
@@ -27,7 +31,10 @@ function MainLayout() {
                 <Sidebar />
               </div>
               <div className="app__main-center">
-                <Outlet />
+                { toggle_upload && <Upload close_upload_menu={close_upload_menu} />}
+                <Outlet 
+                  context={open_upload_menu}
+                />
               </div>
               <div className="app__main-right">
 

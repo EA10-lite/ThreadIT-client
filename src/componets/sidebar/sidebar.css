@@ -7,10 +7,16 @@
     align-items: center;
     background-color: var(--color-white);
     border-radius: .4rem;
+    color: var(--color-dark);
     display: flex;
     margin-bottom: 1rem;
     padding: 1rem ;
 }
+.app__sidebar-profile.active {
+    background-color: var(--color-dark) !important;
+    color: var(--color-white) !important;
+}
+
 .app__sidebar-profile img {
     border-radius: 50%;
     height: 2.5rem;
@@ -20,12 +26,12 @@
 
 .app__sidebar-profile div span {
     font-size: .825rem;
-    color: var(--color-dark);
+    color: inherit;
     margin: 0;
     padding: 0;
 }
 .app__sidebar-profile a {
-    color: var(--color-dark);
+    color: inherit;
     font-size: .75rem;
     font-weight: 400;
 }
@@ -97,7 +103,7 @@
     
     .app__sidebar-menu {
         border-radius: .4rem;
-        width: 0;
+        width: 100%;
         overflow: hidden;
     }
 
@@ -126,9 +132,9 @@
 
 @media screen and (max-width: 560px) {
     .app__sidebar {
-        display: flex;
-        justify-content: flex-end;
         align-items: flex-end;
+        display: flex;
+        justify-content: center;
     }
 
     .app__sidebar-menu .app__sidebar-menu__links {

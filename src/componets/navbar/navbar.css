@@ -22,6 +22,13 @@
     gap: 2rem;
     justify-content: space-between;
 }
+
+.app__navbar-left a img {
+    object-fit: contain;
+    position: relative;
+    width: 5rem;
+}
+
 .app__navbar-left, .app__navbar-right {
     flex: .5;
 }

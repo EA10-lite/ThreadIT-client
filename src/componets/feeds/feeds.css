@@ -4,7 +4,7 @@
 
 /* FEED CREATE */
 
-.app__feeds .app__feed-create {
+.app__feed-create {
     align-items: center;
     background-color: var(--color-white);
     border-radius: .4rem;
@@ -32,6 +32,15 @@
 .app__feed-create svg {
     color: var(--color-dark);
     font-size: 1.5rem;
+}
+
+.app__feed-create__options {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.app__feed-create__options span {
+    font-size: .75rem;
 }
 
 
