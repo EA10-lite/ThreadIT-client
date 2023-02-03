@@ -7,7 +7,7 @@ import {
     FormButton, 
     FormField, 
     FormHeader,
-    FormLink } from '../componets/auth-forms';
+    FormLink } from '../components/auth-forms';
 import { AiOutlineUser } from 'react-icons/ai';
 import { MdLockOpen, MdLockOutline } from 'react-icons/md';
 

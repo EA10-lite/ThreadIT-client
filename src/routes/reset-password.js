@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import validation from '../utils/validation';
-import { Form, FormField, FormButton } from '../componets/auth-forms';
+import { Form, FormField, FormButton } from '../components/auth-forms';
 import { MdEmail } from 'react-icons/md';
 
 function ResetPassword() {

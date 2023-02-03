@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdLockOutline, MdLockOpen } from 'react-icons/md';
-import { Form, FormButton, FormField} from '../componets/auth-forms';
+import { Form, FormButton, FormField} from '../components/auth-forms';
 import validatiton from '../utils/validation';
 
 function SetPassword() {

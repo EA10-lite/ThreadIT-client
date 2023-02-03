@@ -1,6 +1,6 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
-import { Feeds, Story } from '../componets';
+import { Feeds, Story } from '../components';
 
 function Homepage() {
   const open_upload_menu = useOutletContext();

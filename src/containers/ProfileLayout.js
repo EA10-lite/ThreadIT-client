@@ -6,7 +6,7 @@ import '../styles/profile.css';
 import { MdOutlineCameraAlt } from 'react-icons/md';
 
 // components
-import { CreateFeed, Feed } from '../componets';
+import { CreateFeed, Feed } from '../components';
 
 // mock data
 import feeds from '../data/feed';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/main.css';
 import { Outlet } from 'react-router-dom';
-import {  ChatContainer, Navbar,  Sidebar, Upload } from '../componets';
+import {  ChatContainer, Navbar,  Sidebar, Upload } from '../components';
 
 function MainLayout() {
   const [ toggle_upload, set_toggle_upload ] = useState(false);
