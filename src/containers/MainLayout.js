@@ -24,17 +24,15 @@ function MainLayout() {
           open_notifications={open_notifications} 
           close_notifications={close_notifications} 
         />
-        <main className="app__main">
+        { toggle_upload && <Upload close_upload_menu={close_upload_menu} />}
+        <main className={`app__main ${toggle_upload ? "filter" : undefined}`}>
           <div className="app__main-container">
             <div className="app__main-container__row">
               <div className="app__main-left">
                 <Sidebar />
               </div>
               <div className="app__main-center">
-                { toggle_upload && <Upload close_upload_menu={close_upload_menu} />}
-                <Outlet 
-                  context={open_upload_menu}
-                />
+                <Outlet context={open_upload_menu} />
               </div>
               <div className="app__main-right">
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Link, Outlet, useLocation, useOutletContext, useParams } from 'react-router-dom';
 import '../styles/profile.css';
 
 // assets
@@ -14,6 +14,7 @@ import profiles from '../data/profile';
 import user from '../data/user';
 
 function ProfileLayout() {
+    const open_upload_menu = useOutletContext();
     const { pathname } = useLocation();
     const { id } = useParams()
     const [profile_data, set_profile_data] = useState(null);
@@ -77,7 +78,7 @@ function ProfileLayout() {
                 </div>
 
                 { profile_data?.id === user.id && <div className="app__profile-create">
-                    <CreateFeed />
+                    <CreateFeed open_upload_menu={open_upload_menu}/>
                 </div> }
                 <div className="app__profile-container__content">
                     <Outlet />

@@ -8,7 +8,7 @@ function Homepage() {
     <>
       <Story />
       <Feeds 
-        open-upload_menu={open_upload_menu}
+        open_upload_menu={open_upload_menu}
       />
     </>
   )
