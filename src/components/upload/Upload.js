@@ -53,7 +53,7 @@ function Upload({ close_upload_menu }) {
                     </div>
                 </div>
                 <div className="app__upload-footer">
-                    <button disabled={!loading}>
+                    <button disabled={!loading} onClick={()=> set_loading(true)}>
                         { !loading && <div className="btn-overlay" /> }
                         Post
                     </button>
